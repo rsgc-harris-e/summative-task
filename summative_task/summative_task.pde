@@ -14,8 +14,10 @@ void draw() {
   for (float i=0; i<30; i++) {
     pushMatrix();
     translate(xpos,ypos);
+     rotate(radians(i));
     ellipse(0,0,xDia,yDia);
     popMatrix();
+   
     
   }
   }
