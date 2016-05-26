@@ -2,6 +2,7 @@ int xpos;//starting point x axis
 int ypos;//start for y axis
 int xDia;//x axis diameter of circle
 int yDia;//y axis diameter of circle
+int mousepos;
 void setup() {
   size(600, 600);
   xpos=300;
@@ -15,7 +16,7 @@ void draw() {
     pushMatrix();
     translate(xpos,ypos);
     noFill();
-     rotate(radians(i));
+     rotate(radians(i*mouseX*mouseY));
     ellipse(0,0,xDia,yDia);
     popMatrix();
    
